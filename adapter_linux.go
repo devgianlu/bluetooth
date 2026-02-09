@@ -64,6 +64,10 @@ func (a *Adapter) Enable() (err error) {
 	return nil
 }
 
+func (a *Adapter) Id() string {
+	return a.id
+}
+
 func (a *Adapter) Address() (MACAddress, error) {
 	if a.address == "" {
 		return MACAddress{}, errors.New("adapter not enabled")
